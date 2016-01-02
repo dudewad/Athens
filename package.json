@@ -41,6 +41,7 @@
 		"scriptSrc": "script/src/",
 		"partial": "partial/",
 		"root": "./",
+		"routes": "./routes/",
 		"style": "style/",
 		"scss": "scss/",
 		"temp_root": "./.tmp/",
