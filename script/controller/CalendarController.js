@@ -9,7 +9,7 @@ CalendarController.prototype = {
 	 *
 	 * @param calendar  {Athens_Calendar}      The calendar to be created/written to DB
 	 */
-	make: function(calendar){
+	create: function(calendar){
 		//TODO: Stub method to create a calendar via Meteor's insertion calls
 	},
 

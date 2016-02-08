@@ -9,7 +9,7 @@ LocationController.prototype = {
 	 *
 	 * @param location     {Athens_Location}      The location to be created/written to DB
 	 */
-	make: function(location){
+	create: function(location){
 		//TODO: Stub method to create a location via Meteor's insertion calls
 	},
 

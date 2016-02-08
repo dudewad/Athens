@@ -9,7 +9,7 @@ AccountController.prototype = {
 	 *
 	 * @param staffMember     {Athens_StaffMember}      The event to be created/written to DB
 	 */
-	make: function(staffMember){
+	create: function(staffMember){
 		//TODO: Stub method to create an event via Meteor's insertion calls
 	},
 

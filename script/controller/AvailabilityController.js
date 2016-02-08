@@ -9,7 +9,7 @@ AvailabilityController.prototype = {
 	 *
 	 * @param availability  {Athens_Availability}      The availability object to be created/written to DB
 	 */
-	make: function(availability){
+	create: function(availability){
 		//TODO: Stub method to create an availability object via Meteor's insertion calls
 	},
 

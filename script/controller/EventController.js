@@ -9,8 +9,8 @@ EventController.prototype = {
 	 *
 	 * @param event     {Athens_Event}      The event to be created/written to DB
 	 */
-	make: function(event){
-		//TODO: Stub method to create an event via Meteor's insertion calls
+	create: function(event){
+
 	},
 
 
