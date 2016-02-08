@@ -1,8 +1,7 @@
 /**
  * EventController
  */
-var EventController = function () {
-};
+var EventController = function () {};
 
 EventController.prototype = {
 	/**
@@ -10,14 +9,25 @@ EventController.prototype = {
 	 *
 	 * @param event     {Athens_Event}      The event to be created/written to DB
 	 */
-	create: function(event){
+	make: function(event){
 		//TODO: Stub method to create an event via Meteor's insertion calls
 	},
 
 
 
 	/**
-	 * Get an existing event set using an Mongo subset selector
+	 * Retrieve an existing event set using an Mongo subset selector
+	 *
+	 * @param subset        {object}      The selection subset to get from the collection
+	 */
+	retrieve: function(subset){
+		//TODO: Stub method to update an event via Meteor's update calls
+	},
+
+
+
+	/**
+	 * Update an existing event set using an Mongo subset selector
 	 *
 	 * @param subset        {object}      The selection subset to get from the collection
 	 */
@@ -29,7 +39,7 @@ EventController.prototype = {
 
 	/**
 	 * "Remove" an existing event using an Athens_Event model object -- this keeps the item in the DB but removes it
-	 * from the user's list of events. Essentially this enables undoable deletion.
+	 * from the user's list of events. Essentially this enables undoable deletion
 	 *
 	 * @param event     {Athens_Event}      The event to be removed
 	 */
@@ -41,7 +51,7 @@ EventController.prototype = {
 
 	/**
 	 * Delete an existing event using an Athens_Event model object -- this is not undoable and actually removes the
-	 * event from the DB.
+	 * event from the DB. See remove() for the more likely call to make
 	 *
 	 * @param event     {Athens_Event}      The event to be deleted
 	 */

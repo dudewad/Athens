@@ -14,7 +14,7 @@ Athens_Event.prototype = {
 
 
 	/**
-	 * Athens_Event name
+	 * Event name
 	 *
 	 * @type {string}
 	 */
@@ -23,7 +23,7 @@ Athens_Event.prototype = {
 
 
 	/**
-	 * Athens_Event.Date object
+	 * Athens_Event_Date object
 	 *
 	 * @type {Athens_Event_Date}
 	 */
