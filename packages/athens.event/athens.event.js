@@ -1,57 +1,59 @@
 /**
  * Event
+ *
+ * @throws  Error       Throws error if called as a function instead of a constructor with the 'new' keyword
+ *          Error       Throws error if the data object passed contains a key not present in the object prototype
  */
 Athens_Event = function (data) {
-	for (var prop in data) {
-		if(data.hasOwnProperty(prop) && (prop in this)){
-			this[prop] = data[prop];
-		}
-	}
+	Athens_Object.call(this, data);
 };
 
-Athens_Event.prototype = {
-	/**
-	 * User ID that this event definition belongs to
-	 *
-	 * @type {string}
-	 */
-	userId: null,
+Athens_Event.prototype = Object.create(Athens_Object.prototype);
+Athens_Event.prototype.constructor = Athens_Event;
 
 
 
-	/**
-	 * Event name
-	 *
-	 * @type {string}
-	 */
-	name: "testing",
+/**
+ * User ID that this event definition belongs to
+ *
+ * @type {string}
+ */
+Athens_Event.prototype.userId = null;
 
 
 
-	/**
-	 * Athens_Event_Date object
-	 *
-	 * @type {Athens_Event_Date}
-	 */
-	date: null,
+/**
+ * Event name
+ *
+ * @type {string}
+ */
+Athens_Event.prototype.eventName = "testing";
 
 
 
-	/**
-	 * Default event start time. Can be overridden by custom date start/end time settings.
-	 * See Athens_Event_Date_RepeatPattern for more.
-	 *
-	 * @type {string}
-	 */
-	start: null,
+/**
+ * Athens_Event_Date object
+ *
+ * @type {Athens_Event_Date}
+ */
+Athens_Event.prototype.date = null;
 
 
 
-	/**
-	 * Default event end time. Can be overridden by custom date start/end time settings.
-	 * See Athens_Event_Date_RepeatPattern for more.
-	 *
-	 * @type {string}
-	 */
-	end: null
-};
+/**
+ * Default event start time. Can be overridden by custom date start/end time settings.
+ * See Athens_Event_Date_RepeatPattern for more.
+ *
+ * @type {string}
+ */
+Athens_Event.prototype.start = null;
+
+
+
+/**
+ * Default event end time. Can be overridden by custom date start/end time settings.
+ * See Athens_Event_Date_RepeatPattern for more.
+ *
+ * @type {string}
+ */
+Athens_Event.prototype.end = null;

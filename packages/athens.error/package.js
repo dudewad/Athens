@@ -1,8 +1,8 @@
 Package.describe({
-	name: "ghost:athens.event",
+	name: "ghost:athens.error",
 	version: "0.0.1",
 	// Brief, one-line summary of the package.
-	summary: "Event package for Athens application. Defines event controller and models for the calendar system.",
+	summary: "Errors specific to the Athens application",
 	// URL to the Git repository containing the source code for this package.
 	git: "",
 	// By default, Meteor will default to using README.md for documentation.
@@ -12,18 +12,20 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.versionsFrom("1.2.1");
-	api.use([
-		"ecmascript",
-		"ghost:athens.error",
-		"ghost:athens.object"
+	api.use("ecmascript");
+	api.addFiles([
+		"athens.argument-error.js",
+		"athens.constructor-usage-error.js"
 	]);
-	api.addFiles("athens.event.js");
-	api.export("Athens_Event");
+	api.export([
+		"Athens_ArgumentError",
+		"Athens_ConstructorUsageError"
+	])
 });
 
 Package.onTest(function (api) {
 	api.use("ecmascript");
 	api.use("tinytest");
-	api.use("ghost:athens.event");
-	api.addFiles("athens.event.test.js");
+	api.use("ghost:athens.error");
+	api.addFiles("athens.error-tests.js");
 });

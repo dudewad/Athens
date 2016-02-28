@@ -31,8 +31,8 @@ Package.onUse(function (api) {
 		"templating"
 	], "client");
 	api.addFiles([
-		"script/client.athens.js",
-		"template/events.html"
+		"template/events.html",
+		"script/client.athens.js"
 	], "client");
 });
 

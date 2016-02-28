@@ -25,8 +25,10 @@ es5-shim@4.1.14
 fastclick@1.0.7
 geojson-utils@1.0.4
 ghost:athens@0.0.1
+ghost:athens.error@0.0.1
 ghost:athens.event@0.0.1
 ghost:athens.event.date@0.0.1
+ghost:athens.object@0.0.1
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
