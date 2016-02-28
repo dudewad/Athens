@@ -10,5 +10,5 @@ prod/
 /dev/script/vendor.js
 /dev/scss/generated
 /dev/style/
-/public/script/default.css
+/client/script/default.css
 !/dev/asset/font/lmIcon/src/
