@@ -21,3 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 ghost:athens.event
 ghost:athens
 ghost:athens.error
+ghost:athens.collection
+sanjo:jasmine
+velocity:html-reporter

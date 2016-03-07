@@ -1,0 +1,1 @@
+Athens_col_account = new Mongo.Collection("account");

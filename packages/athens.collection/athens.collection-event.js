@@ -1,0 +1,1 @@
+Athens_col_event = new Mongo.Collection("event");

@@ -1,0 +1,1 @@
+Athens_col_user = new Mongo.Collection("user");

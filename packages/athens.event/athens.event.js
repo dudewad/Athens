@@ -1,15 +1,27 @@
 /**
  * Event
- *
- * @throws  Error       Throws error if called as a function instead of a constructor with the 'new' keyword
- *          Error       Throws error if the data object passed contains a key not present in the object prototype
  */
 Athens_Event = function (data) {
-	Athens_Object.call(this, data);
+	Athens_Object.call(this, data, [
+		"userId",
+		"eventName",
+		"date",
+		"start",
+		"end"
+	]);
 };
 
 Athens_Event.prototype = Object.create(Athens_Object.prototype);
 Athens_Event.prototype.constructor = Athens_Event;
+
+
+
+/**
+ * Database ID, if there is one
+ *
+ * @type {string}
+ */
+Athens_Event.prototype._id = null;
 
 
 
@@ -27,7 +39,7 @@ Athens_Event.prototype.userId = null;
  *
  * @type {string}
  */
-Athens_Event.prototype.eventName = "testing";
+Athens_Event.prototype.eventName = null;
 
 
 

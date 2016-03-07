@@ -1,8 +1,8 @@
 Package.describe({
-	name: "ghost:athens.event",
+	name: "ghost:athens.collection",
 	version: "0.0.1",
 	// Brief, one-line summary of the package.
-	summary: "Event package for Athens application. Defines event controller and models for the calendar system.",
+	summary: "",
 	// URL to the Git repository containing the source code for this package.
 	git: "",
 	// By default, Meteor will default to using README.md for documentation.
@@ -14,23 +14,21 @@ Package.onUse(function (api) {
 	api.versionsFrom("1.2.1");
 	api.use([
 		"ecmascript",
-		"ghost:athens.collection",
-		"ghost:athens.error",
-		"ghost:athens.object"
+		"mongo"
 	]);
 	api.addFiles([
-		"athens.event.js",
-		"athens.event-controller.js"
+		"athens.collection-event.js",
+		"athens.collection-account.js"
 	]);
 	api.export([
-		"Athens_Event",
-		"Athens_EventController"
+		"Athens_col_event",
+		"Athens_col_account",
 	]);
 });
 
 Package.onTest(function (api) {
 	api.use("ecmascript");
 	api.use("tinytest");
-	api.use("ghost:athens.event");
-	api.addFiles("athens.event.test.js");
+	api.use("ghost:athens.collection");
+	api.addFiles("athens.collection-tests.js");
 });
